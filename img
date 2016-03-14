@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TestWeb1</title>
+</head>
+<body>
+<h1>图片测试</h1>
+<figure>
+	<figcaption>本地图片</figcaption>
+	<img src="1.jpg" alt="">
+</figure>
+<figure>
+	<figcaption>网络图片</figcaption>
+	<img src="http://imgsrc.baidu.com/forum/w=580/sign=849d6a3b3e87e9504217f3642039531b/6b89ba46f21fbe0959fea6ec6f600c338644ad6c.jpgx" alt="">
+</figure>
+
+</body>
+</html>
