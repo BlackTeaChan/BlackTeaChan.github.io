@@ -3,7 +3,7 @@
 	<h1 style="font-size: 39px;" >欢迎来到陈宏察的个人主页</h1>
 	
 	<p style="font-size: 18px;">你可以和我互相交流，也可以和我一起深入研究Android系统</p>
-
+	<hr>
 	<h2>我的个人地址：</h2>
 	
 	<ul>
