@@ -3,8 +3,6 @@
 	<h1 style="font-size: 39px;" >欢迎来到陈宏察的个人主页</h1>
 	
 	<p style="font-size: 18px;">你可以和我互相交流，也可以和我一起深入研究Android系统</p>
-	
-	<p style="line-height:30px;background-color: #FD6440;color: white;">  友情分享</p>
 
 	<h2>我的个人地址：</h2>
 	
