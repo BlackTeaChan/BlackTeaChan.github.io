@@ -44,7 +44,8 @@ top
 	background: #FC6B2D;
 }
 .menu ul{
-	margin: 17px 0;
+	width:10000px;
+	margin: 0 auto;
 }
 .menu li{
 	list-style-type: none;
