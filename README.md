@@ -9,6 +9,9 @@
 		<li><a target="_blank" href="http://weibo.com/BlackTeaChan">微博</a></li>
 		<li><a target="_blank" href="http://tieba.baidu.com/home/main?un=%E9%99%88_%E7%B4%85%E8%8C%B6%E4%B8%80%E8%B1%86%E5%A5%B6&ie=utf-8&fr=pb&ie=utf-8">百度贴吧</a></li>
 	</ul>
-	
+	<h2>文档：</h2>
+	<ul>
+		<li><a target="_blank" href="https://blackteachan.github.io/AlibabaJavaDevelopment.pdf">《阿里巴巴Java开发手册》</a></li>
+	</ul>
 </body>
 </html>
