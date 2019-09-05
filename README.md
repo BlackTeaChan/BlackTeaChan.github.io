@@ -12,7 +12,7 @@
 	</ul>
 	<h2>文档：</h2>
 	<ul>
-		<li><a target="_blank" href="https://blackteachan.github.io/AlibabaJavaDevelopment.pdf">《阿里巴巴Java开发手册》</a></li>
+		<li><a target="_blank" href="https://blackteachan.github.io/阿里巴巴Java开发手册（华山版）.pdf">《阿里巴巴Java开发手册（华山版）》</a></li>
 	</ul>
 </body>
 </html>
