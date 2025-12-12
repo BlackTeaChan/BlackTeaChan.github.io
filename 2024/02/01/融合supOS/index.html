@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/tea_icon@32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/tea_icon@16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="enCYPNcF0o">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://blackteachan.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="近期做了蓝卓supOS平台的融合工作，简单记录一下">
+<meta name="keywords" content="陈红茶,BlackTeaChan,陈宏察,Java,Android,软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="融合supOS">
+<meta property="og:url" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;2024&#x2F;02&#x2F;01&#x2F;%E8%9E%8D%E5%90%88supOS&#x2F;index.html">
+<meta property="og:site_name" content="陈红茶的部落阁">
+<meta property="og:description" content="近期做了蓝卓supOS平台的融合工作，简单记录一下">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+<meta property="og:updated_time" content="2024-03-07T07:36:02.886Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;images&#x2F;loading.svg">
+
+<link rel="canonical" href="https://blackteachan.com/2024/02/01/%E8%9E%8D%E5%90%88supOS/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>融合supOS | 陈红茶的部落阁</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8cc36e341f010465653f5a656619a85c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陈红茶的部落阁</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">BlackTeaChan&apos;s Blog</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/BlackTeaChan" class="github-corner" title="前往我的Github" aria-label="前往我的Github" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blackteachan.com/2024/02/01/%E8%9E%8D%E5%90%88supOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tea_icon.png">
+      <meta itemprop="name" content="陈红茶">
+      <meta itemprop="description" content="一只捡垃圾的码农">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈红茶的部落阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          融合supOS
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-01 15:35:48" itemprop="dateCreated datePublished" datetime="2024-02-01T15:35:48+08:00">2024-02-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-03-07 15:36:02" itemprop="dateModified" datetime="2024-03-07T15:36:02+08:00">2024-03-07</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>近期做了蓝卓supOS平台的融合工作，简单记录一下</p>
+<a id="more"></a>
+
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建APP"><a href="#创建APP" class="headerlink" title="创建APP"></a>创建APP</h2><ol>
+<li>打开<a href="https://dconsole-cloud.supos.com/open/app/hostdapp" target="_blank" rel="noopener">蓝卓云开发商工作台</a>并登录</li>
+<li>进入【APP集成】 - 【Hosted-APP】页面，创建APP<img src="/images/loading.svg" data-original="Hosted-APP.png" alt="Hosted-APP"></li>
+<li>填写必填项<img src="/images/loading.svg" data-original="%E5%88%9B%E5%BB%BAHosted-APP.png" alt="创建Hosted-APP"></li>
+</ol>
+<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>点击APP卡片下方配置按钮进入配置页<img src="/images/loading.svg" data-original="%E9%85%8D%E7%BD%AE.png" alt="配置"></p>
+<h3 id="APP信息——APP-yaml"><a href="#APP信息——APP-yaml" class="headerlink" title="APP信息——APP.yaml"></a>APP信息——APP.yaml</h3><p>填写必填信息（【开发者名称】和【APP英文名称】会组成应用在supOS访问路径中的前缀）<br><img src="/images/loading.svg" data-original="app.yaml.png" alt="app.yaml"></p>
+<h3 id="开发者信息——vendor-yaml"><a href="#开发者信息——vendor-yaml" class="headerlink" title="开发者信息——vendor.yaml"></a>开发者信息——vendor.yaml</h3><p>非必填（暂时未发现用途）</p>
+<h3 id="APP运行配置——config-ini"><a href="#APP运行配置——config-ini" class="headerlink" title="APP运行配置——config.ini"></a>APP运行配置——config.ini</h3><p>非必填<br>SDK_ADDRESS配置必须要有，否则无法在线上环境调用supOS的SDK<br>config.ini和application.yml的对应关系</p>
+<table>
+<thead>
+<tr>
+<th>config.ini</th>
+<th>application.yml</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[SDK]ADDRESS=xxx</td>
+<td>${SDK_ADDRESS}</td>
+</tr>
+<tr>
+<td>[NACOS]HOST=127.0.0.1</td>
+<td>${NACOS_HOST}</td>
+</tr>
+</tbody></table>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="section">[SDK]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 线上环境调用SDK必须要有</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="attr">ADDRESS</span> = http://<span class="number">192.168</span>.<span class="number">0.212</span>:<span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="section">[SUPOS]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="attr">IP</span> = <span class="number">192.168</span>.<span class="number">0.212</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="attr">ADDRESS</span> = http://<span class="number">192.168</span>.<span class="number">0.212</span>:<span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="attr">WEBHOOK_URL</span> = http://<span class="number">192.168</span>.<span class="number">0.212</span>:<span class="number">8080</span>/apps/a-d/ucs/supos/webhook</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="attr">SUPOS_LOGOUT_URL</span> = http://<span class="number">192.168</span>.<span class="number">0.212</span>:<span class="number">8080</span>/apps/a-d/ucs/supos/auth/logout/%s</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="section">[NACOS]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="attr">HOST</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="section">[REDIS]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="attr">HOST</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span></pre></td></tr></table></figure>
+
+<h3 id="数据源配置——requirement-yaml"><a href="#数据源配置——requirement-yaml" class="headerlink" title="数据源配置——requirement.yaml"></a>数据源配置——requirement.yaml</h3><p>非必填</p>
+<h2 id="菜单配置"><a href="#菜单配置" class="headerlink" title="菜单配置"></a>菜单配置</h2><ol>
+<li>点击【excel模板下载】下载模板</li>
+<li>url字段需要加上supOS前缀，就是上文提到的前端访问的【开发者名称】和【APP英文名称】<br>规则：<code>/apps/{开发者名称}-{APP英文名称}/{地址/路由}</code><br>🌰：<code>/apps/blackteachan-demo/index.html</code><img src="/images/loading.svg" data-original="menu.xlsx.png" alt="menu.xlsx"></li>
+<li>填写完菜单excel后，在工作台中点击【excel导入】，就可以一键生成菜单配置</li>
+</ol>
+<h2 id="容器配置——compose-yaml"><a href="#容器配置——compose-yaml" class="headerlink" title="容器配置——compose.yaml"></a>容器配置——compose.yaml</h2><p>按照右侧规范进行填写，示例如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># -------------------------------------------- </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># add by blackteachan 24-01-16</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># --------------------------------------------  </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v3alpha1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="attr">service:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">proxy:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="attr">paths:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="bullet">-</span> <span class="attr">path:</span> <span class="string">/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="attr">servicePort:</span> <span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">ports:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">port:</span> <span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">targetPort:</span> <span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">protocol:</span> <span class="string">TCP</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">name:</span> <span class="string">xxx</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">containers:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    <span class="comment"># --------- redis ---------</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">redis</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">image:</span> <span class="string">eco-registry.supos.com/dev/supoXxx/redis:6.2.6</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">volumeMounts:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">redis-data</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">mountPath:</span> <span class="string">/data</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">ports:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">6379</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># --------- nacos ---------</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nacos</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">image:</span> <span class="string">eco-registry.supos.com/dev/supoXxx/nacos/nacos-server:2.0.3</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">ports:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8848</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># --------- nginx ---------</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">image:</span> <span class="string">eco-registry.supos.com/dev/supoXxx/nginx:x.x.x</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">ports:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># --------- jar ---------</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">java-app</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">image:</span> <span class="string">eco-registry.supos.com/dev/supoXxx/xxx:x.x.x</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">ports:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">9090</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">resources:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">        <span class="attr">requests:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">cpu:</span> <span class="string">1000m</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">memory:</span> <span class="string">1024Mi</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">        <span class="attr">limits:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">cpu:</span> <span class="string">8000m</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">memory:</span> <span class="string">8192Mi</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">volumeMounts:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">u-storage</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">          <span class="attr">mountPath:</span> <span class="string">/home/u-storage</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">logDirectory:</span> <span class="string">/logs</span></span></pre></td></tr></table></figure>
+
+<h2 id="生成安装包"><a href="#生成安装包" class="headerlink" title="生成安装包"></a>生成安装包</h2><p>前面全部完成之后，会自动生成并下载安装包，点击最外面卡片可以把全部配置打包zip下载（留着后面上传用）<br><img src="/images/loading.svg" data-original="zip%E5%8E%8B%E7%BC%A9%E5%8C%85.png" alt="img.png"></p>
+<h2 id="requirement-yaml"><a href="#requirement-yaml" class="headerlink" title="requirement.yaml"></a>requirement.yaml</h2><p>控制台上没有对requirement.yaml文件进行配置，在这里简单贴一下🌰<br><code>requirements.databases.name</code>字段在application.yml文件中用<code>${SUPOS_DB-XXX-A_DBNAM:xxx}</code>进行注入<br><code>requirements.volumes.name</code>的<code>u-storage</code>对应上文compose.yaml文件里的<code>service.containers.volumeMounts.name</code><br><code>requirements.volumes.localPath</code>是服务器的物理路径，的<code>u-storage</code>对应上文compose.yaml文件里的</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装包版本。必填。固定值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v3alpha4</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 资源申请列表</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="attr">requirements:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="comment"># 申请天湖数据库资源。非必填。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">databases:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">db-xxx-a</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">resourceType:</span> <span class="string">mariadb</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">apply:</span> <span class="string">reject</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">db-xxx-b</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># 资源类型。必填。当前支持：mariadb,tsdb，postgres</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">resourceType:</span> <span class="string">mariadb</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># 使用平台库。必填。值为：allow和reject。默认值为reject。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">apply:</span> <span class="string">reject</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  <span class="comment"># 申请持久卷资源。非必填。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">volumes:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    <span class="comment"># 持久卷名称。必填项。注意：此名称将会在compose.yaml文件中使用。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">redis-data</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># 持久卷类型。必填项。取值：pvc=网络盘，local=本地盘（即当前机器的硬盘）。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">resourceType:</span> <span class="string">pvc</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># 空间大小。非必填。当resourceType=pvc时必填。格式为：100Mi、1Gi</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">size:</span> <span class="string">1Gi</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">u-storage</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">resourceType:</span> <span class="string">local</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">      <span class="comment"># 服务器的路径</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">localPath:</span> <span class="string">/home/u-storage</span></span></pre></td></tr></table></figure>
+
+<h1 id="接入SDK"><a href="#接入SDK" class="headerlink" title="接入SDK"></a>接入SDK</h1><h2 id="申请AKSK"><a href="#申请AKSK" class="headerlink" title="申请AKSK"></a>申请AKSK</h2><ol>
+<li>访问supOS本地地址并登录</li>
+<li>进入【普通视图】<img src="/images/loading.svg" data-original="%E6%99%AE%E9%80%9A%E8%A7%86%E5%9B%BE.png" alt="普通视图"></li>
+<li>点击右上角的设计图标<img src="/images/loading.svg" data-original="%E8%AE%BE%E8%AE%A1%E5%9B%BE%E6%A0%87.png" alt="设计图标"></li>
+<li>进入【系统管理】-【系统配置】-【系统设置】页面的【AK/SK凭证管理】功能<img src="/images/loading.svg" data-original="AKSK%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86.png" alt="AKSK凭证管理"></li>
+<li>新增一个AKSK（APP ID暂时没发现有什么用途）</li>
+</ol>
+<h2 id="组织架构-amp-用户"><a href="#组织架构-amp-用户" class="headerlink" title="组织架构&amp;用户"></a>组织架构&amp;用户</h2><h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>官方文档比较<del>乱七八糟</del>模糊，接口调用的时候尽量按照实际来，文档地址可以在supOS里找到<img src="/images/loading.svg" data-original="%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.png" alt="接口文档.png"></p>
+<h3 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h3><ol>
+<li>进入官网开发者中心可以找到<a href="https://cloud.supos.com/devc/resources/list?type=resource_type_002" target="_blank" rel="noopener">JAVA-SDK源码</a>，官方迭代比较迅速，写这篇文章的时候已经从刚下载的3.2.4升级到了3.2.6</li>
+<li>对bluetron-java-sdk这个模块进行打包，供后续开发使用<br>⭐️也可以为了开发方便，对SDK进行二次封装，并上传到二方库<img src="/images/loading.svg" data-original="SDK%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B.png" alt="SDK项目工程"></li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>🚧以后有时间封装一下</p>
+<h2 id="Java示例"><a href="#Java示例" class="headerlink" title="Java示例"></a>Java示例</h2><ol>
+<li>application.yml配置里需要用到初始化数据库 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">sql:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="attr">init:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">mode:</span> <span class="string">always</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">schema-locations:</span> <span class="string">classpath*:db/schema.sql</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">jpa:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="attr">hibernate:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span></pre></td></tr></table></figure></li>
+<li>创建sql文件，放在<code>src/main/resources/db/schema.sql</code>这个位置（spring.sql.init.schema-locations）<br>如果是用Navicat导出结构，需要把所有创建表的语句调整一下，否则每次启动都会重新删表建表 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Navicat导出</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> <span class="string">`xxx`</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`xxx`</span> (</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    ......</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">);</span></pre></td></tr></table></figure>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 修改后</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`xxx`</span> (</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    ......</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">);</span></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<h1 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h1><h2 id="准备工作-1"><a href="#准备工作-1" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h3><p><a href="https://www.baidu.com/s?ie=UTF-8&wd=%E5%AE%89%E8%A3%85Docker" target="_blank" rel="noopener">一键安装脚本</a></p>
+<h3 id="IDEA插件"><a href="#IDEA插件" class="headerlink" title="IDEA插件"></a>IDEA插件</h3><p>确保IDEA安装了Docker插件，构建镜像的时候简单方便些</p>
+<h3 id="添加私有注册表"><a href="#添加私有注册表" class="headerlink" title="添加私有注册表"></a>添加私有注册表</h3><p>在IDEA的服务中加入Docker注册表<img src="/images/loading.svg" data-original="Docker%E6%B3%A8%E5%86%8C%E8%A1%A8.png" alt="Docker注册表"></p>
+<h2 id="前端打包"><a href="#前端打包" class="headerlink" title="前端打包"></a>前端打包</h2><ol>
+<li>把前端文件夹和Dockerfile放在一个目录下<img src="/images/loading.svg" data-original="%E5%89%8D%E7%AB%AF%E7%9B%AE%E5%BD%95.png" alt="前端目录"></li>
+<li>编写Dockerfile<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> eco-registry.supos.com/eco/nginx:latest</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置工作目录</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拷贝nginx配置文件到镜像</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="bash"> default.conf /etc/nginx/conf.d/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拷贝应用文件到镜像</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="bash"> dist /usr/share/nginx/html</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置容器的默认端口</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span></pre></td></tr></table></figure></li>
+<li>用IDEA构建镜像<img src="/images/loading.svg" data-original="%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F.png" alt="构建镜像"></li>
+<li>构建完成后推送镜像<img src="/images/loading.svg" data-original="%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F.png" alt="推送镜像"></li>
+<li>【仓库】和【标签】对应上文compose.yaml文件中的镜像地址最后那一坨，比如仓库是redis，标签是6.2.6，镜像就是redis:6.2.6</li>
+</ol>
+<h2 id="后端打包"><a href="#后端打包" class="headerlink" title="后端打包"></a>后端打包</h2><ol>
+<li>编写Dockerfile<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基础镜像地址</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> eco-registry.supos.com/eco/openjdk:<span class="number">8</span>-jdk-alpine</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置时区</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'Asia/Shanghai'</span> &gt;/etc/timezone</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /apps</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加程序jar文件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="bash"> ./target/xxx-*.jar ./xxx.jar</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置应用的jvm参数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> jvm_opts=<span class="string">"-server -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -Xms512m -Xmx1024m -Xmn512m -Xss256k -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC -Dtask=true"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8082</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> <span class="built_in">exec</span> java -jar <span class="variable">$jvm_opts</span> xxx.jar</span></span></pre></td></tr></table></figure></li>
+<li>把下载下来的配置文件解压，修改容器里的镜像再打包<img src="/images/loading.svg" data-original="%E5%90%8E%E7%AB%AF%E7%9B%AE%E5%BD%95.png" alt="后端目录"></li>
+</ol>
+<h2 id="上传APP"><a href="#上传APP" class="headerlink" title="上传APP"></a>上传APP</h2><ol>
+<li>进入supOS设计模式的【APP管理】-【APP运行管理】页面</li>
+<li>选择本地安装，上传刚刚的压缩包<img src="/images/loading.svg" data-original="%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85.png" alt="本地安装"></li>
+<li>安装完成之后就可以运行了</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>如果文章对您有帮助，欢迎评论或打赏，感谢支持！</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.svg" data-original="/images/wechatpay.png" alt="陈红茶 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.svg" data-original="/images/alipay.png" alt="陈红茶 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>陈红茶
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blackteachan.com/2024/02/01/%E8%9E%8D%E5%90%88supOS/" title="融合supOS">https://blackteachan.com/2024/02/01/%E8%9E%8D%E5%90%88supOS/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本部落阁所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/05/%E5%A4%96%E6%98%9F%E4%BA%BAAlphaR2%E4%B8%8A%E6%89%8B%E4%BD%93%E9%AA%8C/" rel="prev" title="外星人AlphaR2上手体验">
+      <i class="fa fa-chevron-left"></i> 外星人AlphaR2上手体验
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/11/08/SpringBoot%E4%B9%8B%E8%B7%AF%EF%BC%9AMP%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="next" title="SpringBoot之路：MP多数据源">
+      SpringBoot之路：MP多数据源 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建APP"><span class="nav-number">1.1.</span> <span class="nav-text">创建APP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础配置"><span class="nav-number">1.2.</span> <span class="nav-text">基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#APP信息——APP-yaml"><span class="nav-number">1.2.1.</span> <span class="nav-text">APP信息——APP.yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发者信息——vendor-yaml"><span class="nav-number">1.2.2.</span> <span class="nav-text">开发者信息——vendor.yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APP运行配置——config-ini"><span class="nav-number">1.2.3.</span> <span class="nav-text">APP运行配置——config.ini</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据源配置——requirement-yaml"><span class="nav-number">1.2.4.</span> <span class="nav-text">数据源配置——requirement.yaml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#菜单配置"><span class="nav-number">1.3.</span> <span class="nav-text">菜单配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器配置——compose-yaml"><span class="nav-number">1.4.</span> <span class="nav-text">容器配置——compose.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成安装包"><span class="nav-number">1.5.</span> <span class="nav-text">生成安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#requirement-yaml"><span class="nav-number">1.6.</span> <span class="nav-text">requirement.yaml</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接入SDK"><span class="nav-number">2.</span> <span class="nav-text">接入SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#申请AKSK"><span class="nav-number">2.1.</span> <span class="nav-text">申请AKSK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组织架构-amp-用户"><span class="nav-number">2.2.</span> <span class="nav-text">组织架构&amp;用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文档"><span class="nav-number">2.2.1.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDK"><span class="nav-number">2.2.2.</span> <span class="nav-text">SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码"><span class="nav-number">2.2.3.</span> <span class="nav-text">示例代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java示例"><span class="nav-number">2.3.</span> <span class="nav-text">Java示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打包上传"><span class="nav-number">3.</span> <span class="nav-text">打包上传</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作-1"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Docker"><span class="nav-number">3.1.1.</span> <span class="nav-text">安装Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IDEA插件"><span class="nav-number">3.1.2.</span> <span class="nav-text">IDEA插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加私有注册表"><span class="nav-number">3.1.3.</span> <span class="nav-text">添加私有注册表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端打包"><span class="nav-number">3.2.</span> <span class="nav-text">前端打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后端打包"><span class="nav-number">3.3.</span> <span class="nav-text">后端打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传APP"><span class="nav-number">3.4.</span> <span class="nav-text">上传APP</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="陈红茶"
+      src="/images/tea_icon.png">
+  <p class="site-author-name" itemprop="name">陈红茶</p>
+  <div class="site-description" itemprop="description">一只捡垃圾的码农</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlackTeaChan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlackTeaChan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chenhao@blackteachan.com" title="E-Mail → mailto:chenhao@blackteachan.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/BlackTeaChan" title="微博 → https:&#x2F;&#x2F;weibo.com&#x2F;BlackTeaChan" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/blackteachan" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;blackteachan" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://v.douyin.com/U7g8cT7DS1s" title="抖音 → https:&#x2F;&#x2F;v.douyin.com&#x2F;U7g8cT7DS1s" rel="noopener" target="_blank"><i class="fa fa-fw fa-dy"></i>抖音</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.xiaohongshu.com/user/profile/5f64407a0000000001005674" title="小红书 → https:&#x2F;&#x2F;www.xiaohongshu.com&#x2F;user&#x2F;profile&#x2F;5f64407a0000000001005674" rel="noopener" target="_blank"><i class="fa fa-fw fa-xhs"></i>小红书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/45628378" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;45628378" rel="noopener" target="_blank"><i class="fa fa-fw fa-bilibili"></i>B站</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19035478号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-microchip"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈红茶</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/mine.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(() => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '00ec5464e0cf8fdc5c08',
+      clientSecret: 'c3a724dc6d7ce2a277f2bc6d6f8d27447c80b9cf',
+      repo: 'blog-gitlak',
+      owner: 'BlackTeaChan',
+      admin: ['BlackTeaChan'],
+      id: '544dae1b4e4303a4014cd73455da3bae',
+        language: 'zh-CN',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script></body>
+</html>
