@@ -47,17 +47,18 @@
   };
 </script>
 
-  <meta name="description" content="一只捡垃圾的码农">
-<meta name="keywords" content="陈红茶,BlackTeaChan,陈宏察,Java,Android,软件">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈红茶的部落阁">
-<meta property="og:url" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;archives&#x2F;2021&#x2F;index.html">
+  <meta name="description" content="TINYINT、SMALLINT、MEDIUMINT…各类型占用字节">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL各字段类型存储量">
+<meta property="og:url" content="https:&#x2F;&#x2F;blackteachan.com&#x2F;2025&#x2F;12&#x2F;29&#x2F;MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F&#x2F;index.html">
 <meta property="og:site_name" content="陈红茶的部落阁">
-<meta property="og:description" content="一只捡垃圾的码农">
+<meta property="og:description" content="TINYINT、SMALLINT、MEDIUMINT…各类型占用字节">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2025-12-29T05:46:38.628Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blackteachan.com/archives/2021/">
+<link rel="canonical" href="https://blackteachan.com/2025/12/29/MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F/">
 
 
 <script id="page-configurations">
@@ -65,11 +66,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>归档 | 陈红茶的部落阁</title>
+  <title>MySQL各字段类型存储量 | 陈红茶的部落阁</title>
   
 
 
@@ -213,113 +214,211 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 21 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blackteachan.com/2025/12/29/MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tea_icon.png">
+      <meta itemprop="name" content="陈红茶">
+      <meta itemprop="description" content="一只捡垃圾的码农">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈红茶的部落阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          MySQL各字段类型存储量
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-12-29 13:07:59 / 修改时间：13:46:38" itemprop="dateCreated datePublished" datetime="2025-12-29T13:07:59+08:00">2025-12-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">软件</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h2 class="collection-header">2021</h2>
-    </div>
+        <p>TINYINT、SMALLINT、MEDIUMINT…各类型占用字节</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-06T15:35:13+08:00"
-              content="2021-08-06">
-          08-06
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/2021/08/06/MyBatisPlus%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/" itemprop="url">
-            <span itemprop="name">MyBatisPlus分页查询</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-05T13:49:02+08:00"
-              content="2021-08-05">
-          08-05
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/2021/08/05/JS%E8%B0%83%E7%94%A8%E6%94%AF%E4%BB%98%E5%AE%9D%E6%89%AB%E4%B8%80%E6%89%AB/" itemprop="url">
-            <span itemprop="name">JS调用支付宝扫一扫</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-03T09:39:04+08:00"
-              content="2021-08-03">
-          08-03
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/2021/08/03/SpringBoot%E4%B9%8B%E8%B7%AF%EF%BC%9A%E6%95%B4%E5%90%88MyBatisPlus/" itemprop="url">
-            <span itemprop="name">SpringBoot之路：整合MyBatisPlus</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-28T14:30:58+08:00"
-              content="2021-01-28">
-          01-28
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/2021/01/28/%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95FreeSwitchServer%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">简单记录FreeSwitchServer搭建过程</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储空间（字节）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TINYINT</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>3</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td>4</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>8</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>FLOAT(X)</td>
+<td>4（X&lt;=24）<br>8（25&lt;X&lt;=53）</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>8</td>
+</tr>
+<tr>
+<td>DOUBLE PRECISION</td>
+<td>8</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>8</td>
+</tr>
+<tr>
+<td>DECIMAL(M,D)</td>
+<td>M（M&gt;D）<br>D+2（M&lt;D）</td>
+</tr>
+<tr>
+<td>NUMERIC(M,D)</td>
+<td>M（M&gt;D）<br>D+2（M&lt;D）</td>
+</tr>
+</tbody></table>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>如果文章对您有帮助，欢迎评论或打赏，感谢支持！</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.svg" data-original="/images/wechatpay.png" alt="陈红茶 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/loading.svg" data-original="/images/alipay.png" alt="陈红茶 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>陈红茶
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blackteachan.com/2025/12/29/MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F/" title="MySQL各字段类型存储量">https://blackteachan.com/2025/12/29/MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本部落阁所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i> 软件</a>
+              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/19/%E8%A7%A3%E5%86%B3MacBook%E5%90%88%E7%9B%96%E8%80%97%E7%94%B5%E4%B8%A5%E9%87%8D%E7%9A%84%E9%97%AE%E9%A2%98/" rel="prev" title="解决MacBook合盖耗电严重的问题">
+      <i class="fa fa-chevron-left"></i> 解决MacBook合盖耗电严重的问题
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
   
   
 
-  
-
+  </div>
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -529,6 +628,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(() => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '00ec5464e0cf8fdc5c08',
+      clientSecret: 'c3a724dc6d7ce2a277f2bc6d6f8d27447c80b9cf',
+      repo: 'blog-gitlak',
+      owner: 'BlackTeaChan',
+      admin: ['BlackTeaChan'],
+      id: '8748bd5af1c5008175c7df36efd25a2b',
+        language: 'zh-CN',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 <script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"log":false});</script></body>
 </html>

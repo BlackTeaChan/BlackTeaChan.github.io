@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MySQL各字段类型存储量</title>
+    <url>/2025/12/29/MySQL%E5%90%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E9%87%8F/</url>
+    <content><![CDATA[<p>TINYINT、SMALLINT、MEDIUMINT…各类型占用字节</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储空间（字节）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TINYINT</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>3</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td>4</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>8</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>FLOAT(X)</td>
+<td>4（X&lt;=24）<br>8（25&lt;X&lt;=53）</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>8</td>
+</tr>
+<tr>
+<td>DOUBLE PRECISION</td>
+<td>8</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>8</td>
+</tr>
+<tr>
+<td>DECIMAL(M,D)</td>
+<td>M（M&gt;D）<br>D+2（M&lt;D）</td>
+</tr>
+<tr>
+<td>NUMERIC(M,D)</td>
+<td>M（M&gt;D）<br>D+2（M&lt;D）</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>软件</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决MacBook合盖耗电严重的问题</title>
     <url>/2025/11/19/%E8%A7%A3%E5%86%B3MacBook%E5%90%88%E7%9B%96%E8%80%97%E7%94%B5%E4%B8%A5%E9%87%8D%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>手头有一台MacBookPro2019，合盖之后过段时间再打开，总是会莫名其妙少了很多电量，在网上搜寻许多办法后成功把续航拉久</p>
